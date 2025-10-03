@@ -174,8 +174,8 @@
 <script>
 function sendWhatsAppBooking(e) {
   e.preventDefault();
-  // phone number in international format, no + or zeros; change if needed
-  const phone = "2347038989774";
+
+  const phone = "2347038989774"; // ✅ Your WhatsApp number
 
   const name = document.getElementById("bkName").value.trim();
   const service = document.getElementById("bkService").value.trim();
@@ -183,19 +183,17 @@ function sendWhatsAppBooking(e) {
   const time = document.getElementById("bkTime").value;
   const note = document.getElementById("bkNote").value.trim();
 
-  // Build message (readable)
+  // Build WhatsApp message
   let message = Hello Mtpro Beauty Home,%0A%0AI'd like to book an appointment.%0A;
   if (name) message += %0AName: ${encodeURIComponent(name)};
   if (service) message += %0AService: ${encodeURIComponent(service)};
   if (date) message += %0ADate: ${encodeURIComponent(date)};
-  if (time) message += %0ARequest Time: ${encodeURIComponent(time)};
+  if (time) message += %0ATime: ${encodeURIComponent(time)};
   if (note) message += %0ANotes: ${encodeURIComponent(note)};
   message += %0A%0APlease confirm availability. Thank you!;
 
-  // wa.me link (opens WhatsApp)
+  // Open WhatsApp with pre-filled booking message
   const url = https://wa.me/${phone}?text=${message};
-
-  // Open in new tab/window (works on desktop & mobile)
   window.open(url, "_blank", "noopener,noreferrer");
 }
 </script>
