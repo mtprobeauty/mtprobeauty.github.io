@@ -149,54 +149,7 @@
 							<p>This is Mtpro <strong>Simply The Best</strong><a href="http://html5up.net"></a>. 
 							<a href="http://html5up.net/license"><Address><strong>📍 </strong> October Place Complex, Maxi Pharmacy Opposite Jemo Petrol Station</Address> Old Ife Road Ibadan Oyo State Nigeria</a> </p>
 						</section>
-						<!-- Booking form that opens WhatsApp -->
-<form id="waBookingForm" onsubmit="sendWhatsAppBooking(event)" style="max-width:420px;">
-  <h3>Book via WhatsApp</h3>
-
-  <label for="bkName">Your name</label>
-  <input id="bkName" name="name" type="text" required>
-
-  <label for="bkService">Service</label>
-  <input id="bkService" name="service" type="text" placeholder="e.g., Makeover, Facial" required>
-
-  <label for="bkDate">Preferred date</label>
-  <input id="bkDate" name="date" type="date">
-
-  <label for="bkTime">Preferred time</label>
-  <input id="bkTime" name="time" type="time">
-
-  <label for="bkNote">Additional notes</label>
-  <textarea id="bkNote" name="note" rows="2" placeholder="Any important details..."></textarea>
-
-  <button type="submit">Send booking to WhatsApp</button>
-</form>
-
-<script>
-function sendWhatsAppBooking(e) {
-  e.preventDefault();
-
-  const phone = "2347038989774"; // ✅ Your WhatsApp number
-
-  const name = document.getElementById("bkName").value.trim();
-  const service = document.getElementById("bkService").value.trim();
-  const date = document.getElementById("bkDate").value;
-  const time = document.getElementById("bkTime").value;
-  const note = document.getElementById("bkNote").value.trim();
-
-  // Build WhatsApp message
-  let message = Hello Mtpro Beauty Home,%0A%0AI'd like to book an appointment.%0A;
-  if (name) message += %0AName: ${encodeURIComponent(name)};
-  if (service) message += %0AService: ${encodeURIComponent(service)};
-  if (date) message += %0ADate: ${encodeURIComponent(date)};
-  if (time) message += %0ATime: ${encodeURIComponent(time)};
-  if (note) message += %0ANotes: ${encodeURIComponent(note)};
-  message += %0A%0APlease confirm availability. Thank you!;
-
-  // Open WhatsApp with pre-filled booking message
-  const url = https://wa.me/${phone}?text=${message};
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-</script>
+						
 						<section>
 							<ul class="icons">
 								<li><a href="https://wa.me/2348133071479" class="icon brands fa-whatsapp"><span class="label">whatsapp</span></a></li>
@@ -236,6 +189,7 @@ function sendWhatsAppBooking(e) {
 	</body>
 
 </html>
+
 
 
 
